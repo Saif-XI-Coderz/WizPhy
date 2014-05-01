@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minWidth="-1.0" prefHeight="521.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wizphy.WizPhyGUIController">
+  <children>
+    <TabPane prefHeight="521.0" prefWidth="743.0" side="TOP" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <tabs>
+        <Tab text="The Course">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <SplitPane dividerPositions="0.21679197994987467" focusTraversable="true" prefHeight="490.0" prefWidth="709.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                  <items>
+                    <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="449.0" prefWidth="170.0">
+                      <children>
+                        <TextField layoutX="-1.0" layoutY="0.0" prefWidth="115.0" />
+                        <Accordion minWidth="119.0" prefHeight="467.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+                          <expandedPane>
+                            <TitledPane fx:id="x1" animated="false" minWidth="115.0" prefHeight="396.0" prefWidth="115.0" text="Kinematics">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                    <ListView disable="false" prefHeight="352.0" prefWidth="152.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </expandedPane>
+                          <panes>
+                            <fx:reference source="x1" />
+                            <TitledPane animated="false" text="Dynamics">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Forces">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Work, Energy and Power">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Circular Motion">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Gravitational Field">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <Button layoutX="114.0" layoutY="0.0" mnemonicParsing="false" prefWidth="56.0" text="Search" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <ToolBar prefWidth="537.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                          <items>
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="First" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Previous" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Play" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Pause" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Stop" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Nest" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Last" />
+                          </items>
+                        </ToolBar>
+                      </children>
+                    </AnchorPane>
+                  </items>
+                </SplitPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="The Homework">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <SplitPane dividerPositions="0.21679197994987467" focusTraversable="true" prefHeight="490.0" prefWidth="743.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <items>
+                    <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="449.0" prefWidth="170.0">
+                      <children>
+                        <TextField layoutX="-1.0" layoutY="0.0" prefWidth="115.0" />
+                        <Accordion minWidth="119.0" prefHeight="467.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+                          <expandedPane>
+                            <TitledPane id="x1" fx:id="x2" animated="false" minWidth="115.0" prefHeight="396.0" prefWidth="115.0" text="Kinematics">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                    <ListView disable="false" prefHeight="352.0" prefWidth="152.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </expandedPane>
+                          <panes>
+                            <fx:reference source="x2" />
+                            <TitledPane animated="false" text="Dynamics">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Forces">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Work, Energy and Power">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Circular Motion">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Gravitational Field">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <Button layoutX="114.0" layoutY="0.0" mnemonicParsing="false" prefWidth="56.0" text="Search" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <ToolBar prefWidth="537.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                          <items>
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Line" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Square" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Elipsis" />
+                            <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="11.0" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Text" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Eqtn" />
+                            <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="11.0" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Vector" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Axis" />
+                            <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="11.0" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="-" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="100%" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="+" />
+                            <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="11.0" />
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="SUBMIT" />
+                          </items>
+                        </ToolBar>
+                      </children>
+                    </AnchorPane>
+                  </items>
+                </SplitPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="The Lab">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <SplitPane dividerPositions="0.21679197994987467" focusTraversable="true" prefHeight="490.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <items>
+                    <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="449.0" prefWidth="170.0">
+                      <children>
+                        <TextField layoutX="-1.0" layoutY="0.0" prefWidth="115.0" />
+                        <Accordion minWidth="119.0" prefHeight="467.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+                          <expandedPane>
+                            <TitledPane fx:id="x3" animated="false" text="Dynamics">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </expandedPane>
+                          <panes>
+                            <TitledPane id="x1" animated="false" minWidth="115.0" prefHeight="396.0" prefWidth="115.0" text="Kinematics">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                    <ListView disable="false" prefHeight="352.0" prefWidth="152.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <fx:reference source="x3" />
+                            <TitledPane animated="false" text="Forces">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Work, Energy and Power">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Circular Motion">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Gravitational Field">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <Button layoutX="114.0" layoutY="0.0" mnemonicParsing="false" prefWidth="56.0" text="Search" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <SplitPane dividerPositions="0.7510288065843621" focusTraversable="true" orientation="VERTICAL" prefHeight="488.0" prefWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                              <children>
+                                <SplitPane dividerPositions="0.5776699029126213" focusTraversable="true" prefHeight="362.0" prefWidth="620.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                  <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                      <children>
+                                        <Accordion prefHeight="360.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <expandedPane>
+                                            <TitledPane fx:id="x4" animated="false" text="Speed-TIme Graph">
+                                              <content>
+                                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="255.0">
+                                                  <children>
+                                                    <AreaChart id="AreaChart" prefHeight="268.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                      </xAxis>
+                                                      <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                      </yAxis>
+                                                    </AreaChart>
+                                                  </children>
+                                                </AnchorPane>
+                                              </content>
+                                            </TitledPane>
+                                          </expandedPane>
+                                          <panes>
+                                            <TitledPane animated="false" expanded="false" text="Distance">
+                                              <content>
+                                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                  <children>
+                                                    <AreaChart id="AreaChart" prefHeight="268.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                      </xAxis>
+                                                      <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                      </yAxis>
+                                                    </AreaChart>
+                                                  </children>
+                                                </AnchorPane>
+                                              </content>
+                                            </TitledPane>
+                                            <fx:reference source="x4" />
+                                            <TitledPane animated="false" text="Acceleration-Time Graph">
+                                              <content>
+                                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                  <children>
+                                                    <AreaChart id="AreaChart" prefHeight="268.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                      </xAxis>
+                                                      <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                      </yAxis>
+                                                    </AreaChart>
+                                                  </children>
+                                                </AnchorPane>
+                                              </content>
+                                            </TitledPane>
+                                            <TitledPane animated="false" expanded="false" text="Energy-Time Graph">
+                                              <content>
+                                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                  <children>
+                                                    <LineChart id="LineChart" prefHeight="268.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                      <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                      </xAxis>
+                                                      <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                      </yAxis>
+                                                    </LineChart>
+                                                  </children>
+                                                </AnchorPane>
+                                              </content>
+                                            </TitledPane>
+                                          </panes>
+                                        </Accordion>
+                                      </children>
+                                    </AnchorPane>
+                                  </items>
+                                </SplitPane>
+                              </children>
+                            </AnchorPane>
+                            <AnchorPane maxHeight="-Infinity" maxWidth="-1.0" minHeight="-Infinity" minWidth="-1.0" prefHeight="118.0" prefWidth="384.0">
+                              <children>
+                                <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="34.0">
+                                  <children>
+                                    <Label prefWidth="42.0" text="Velocity" HBox.hgrow="NEVER" />
+                                    <TextField prefWidth="69.0" HBox.hgrow="NEVER" />
+                                    <Label prefWidth="21.0" text="m/s" HBox.hgrow="NEVER" />
+                                  </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="62.0">
+                                  <children>
+                                    <Label text="Angle" />
+                                    <TextField prefWidth="69.0" />
+                                    <Label text="rad" />
+                                  </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="88.0">
+                                  <children>
+                                    <Label text="Mass" />
+                                    <TextField prefWidth="69.0" />
+                                    <Label text="kg" />
+                                  </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="3.0">
+                                  <children>
+                                    <ToggleButton cache="true" cacheHint="DEFAULT" depthTest="INHERIT" mnemonicParsing="false" mouseTransparent="false" text="Reset" underline="false" />
+                                    <ToggleButton cache="true" cacheHint="DEFAULT" depthTest="INHERIT" mnemonicParsing="false" mouseTransparent="false" text="Start" underline="false" />
+                                  </children>
+                                </HBox>
+                                <Separator layoutX="171.0" layoutY="0.0" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="118.0" />
+                                <Label alignment="CENTER" layoutX="37.0" layoutY="2.0" text="Parameters">
+                                  <font>
+                                    <Font name="System Bold" size="18.0" fx:id="x5" />
+                                  </font>
+                                </Label>
+                                <Label alignment="CENTER" font="$x5" layoutX="215.0" layoutY="2.0" text="Scales" />
+                                <Label alignment="CENTER" font="$x5" layoutX="410.0" layoutY="2.0" text="Options" />
+                                <HBox id="HBox" alignment="CENTER" layoutX="185.0" layoutY="37.0" spacing="5.0">
+                                  <children>
+                                    <Label text="Time" />
+                                    <Slider />
+                                  </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER" layoutX="179.0" layoutY="65.0" spacing="5.0">
+                                  <children>
+                                    <Label text="Space" />
+                                    <Slider />
+                                  </children>
+                                </HBox>
+                                <Separator layoutX="386.0" layoutY="0.0" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="118.0" />
+                                <CheckBox layoutX="396.0" layoutY="37.0" mnemonicParsing="false" text="Show Paths" />
+                                <CheckBox layoutX="396.0" layoutY="65.0" mnemonicParsing="false" text="Air Resistance" />
+                              </children>
+                            </AnchorPane>
+                          </items>
+                        </SplitPane>
+                      </children>
+                    </AnchorPane>
+                  </items>
+                </SplitPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
