@@ -7,6 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
 
 <AnchorPane id="AnchorPane" minWidth="-1.0" prefHeight="521.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wizphy.WizPhyGUIController">
   <children>
@@ -16,16 +17,28 @@
           <content>
             <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
               <children>
-                <SplitPane dividerPositions="0.21679197994987467" focusTraversable="true" prefHeight="490.0" prefWidth="709.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                <SplitPane dividerPositions="0.2606516290726817" focusTraversable="true" prefHeight="490.0" prefWidth="709.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
                   <items>
-                    <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="449.0" prefWidth="170.0">
+                    <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="449.0" prefWidth="205.0">
                       <children>
-                        <TextField layoutX="-1.0" layoutY="0.0" prefWidth="115.0" />
+                        <TextField layoutX="0.0" layoutY="0.0" prefWidth="149.0" />
                         <Accordion minWidth="119.0" prefHeight="252.0" prefWidth="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
                           <expandedPane>
-                            <TitledPane fx:id="x6" animated="false" text="Forces">
+                            <TitledPane fx:id="x7" animated="false" text="Gravitational Field">
                               <content>
-                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                    <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="8.0" spacing="5.0">
+                                      <children>
+                                        <Label onMouseClicked="#lbl17Clicked" prefWidth="193.0" text="Gravitational Field" />
+                                        <Label onMouseClicked="#lbl18Clicked" prefWidth="193.0" text="Gravitational Potential" />
+                                        <Label onMouseClicked="#lbl19Clicked" prefWidth="193.0" text="Field of a Point Mass" />
+                                        <Label onMouseClicked="#lbl20Clicked" prefWidth="193.0" text="Force between point masses" />
+                                        <Label onMouseClicked="#lbl21Clicked" text="Field near to the surface of the earth" />
+                                      </children>
+                                    </VBox>
+                                  </children>
+                                </AnchorPane>
                               </content>
                             </TitledPane>
                           </expandedPane>
@@ -34,35 +47,82 @@
                               <content>
                                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                   <children>
-                                    <ListView disable="false" prefHeight="352.0" prefWidth="152.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <VBox id="VBox" alignment="CENTER" layoutX="7.0" spacing="5.0" AnchorPane.topAnchor="4.0">
+                                      <children>
+                                        <Label onMouseClicked="#lbl1Clicked" prefWidth="193.0" text="Linear Motion" />
+                                        <Label onMouseClicked="#lbl2Clicked" prefWidth="193.0" text="Non-Linear Motion" />
+                                      </children>
+                                    </VBox>
                                   </children>
                                 </AnchorPane>
                               </content>
                             </TitledPane>
                             <TitledPane animated="false" text="Dynamics">
                               <content>
-                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                    <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="8.0" spacing="5.0">
+                                      <children>
+                                        <Label onMouseClicked="#lbl3Clicked" prefWidth="193.0" text="Linear Momentum" />
+                                        <Label onMouseClicked="#lbl4Clicked" prefWidth="193.0" text="Newton's Laws of Motion " />
+                                      </children>
+                                    </VBox>
+                                  </children>
+                                </AnchorPane>
                               </content>
                             </TitledPane>
-                            <fx:reference source="x6" />
+                            <TitledPane fx:id="x6" animated="false" text="Forces">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                    <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="4.0" spacing="5.0">
+                                      <children>
+                                        <Label onMouseClicked="#lbl5Clicked" prefWidth="193.0" text="Types of Forces" />
+                                        <Label onMouseClicked="#lbl6Clicked" prefWidth="193.0" text="Center of Gravity" />
+                                        <Label onMouseClicked="#lbl7Clicked" prefWidth="193.0" text="Turning Effects of Forces" />
+                                        <Label onMouseClicked="#lbl8Clicked" prefWidth="193.0" text="Equilibrium of Forces" />
+                                      </children>
+                                    </VBox>
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
                             <TitledPane animated="false" text="Work, Energy and Power">
                               <content>
-                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                    <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="8.0" spacing="5.0">
+                                      <children>
+                                        <Label onMouseClicked="#lbl9Clicked" prefWidth="193.0" text="Kinetic Energy" />
+                                        <Label onMouseClicked="#lbl10Clicked" prefWidth="193.0" text="Potential Energy" />
+                                        <Label onMouseClicked="#lbl11Clicked" prefWidth="193.0" text="Internal Energy" />
+                                        <Label onMouseClicked="#lbl12Clicked" prefWidth="193.0" text="Energy Conversion and Conservation" />
+                                        <Label onMouseClicked="#lbl13Clicked" prefWidth="193.0" text="Work and Power" />
+                                      </children>
+                                    </VBox>
+                                  </children>
+                                </AnchorPane>
                               </content>
                             </TitledPane>
                             <TitledPane animated="false" text="Circular Motion">
                               <content>
-                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                    <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="8.0" spacing="5.0">
+                                      <children>
+                                        <Label onMouseClicked="#lbl14Clicked" prefWidth="193.0" text="Centripetal Force" />
+                                        <Label onMouseClicked="#lbl15Clicked" prefWidth="193.0" text="Centripetal Acceleration" />
+                                        <Label onMouseClicked="#lbl16Clicked" prefWidth="193.0" text="Kinematics of a Uniform Circular Motion" />
+                                      </children>
+                                    </VBox>
+                                  </children>
+                                </AnchorPane>
                               </content>
                             </TitledPane>
-                            <TitledPane animated="false" text="Gravitational Field">
-                              <content>
-                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                              </content>
-                            </TitledPane>
+                            <fx:reference source="x7" />
                           </panes>
                         </Accordion>
-                        <Button layoutX="114.0" layoutY="0.0" mnemonicParsing="false" prefWidth="56.0" text="Search" />
+                        <Button layoutX="149.0" layoutY="0.0" minHeight="14.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="56.0" text="Search" />
                         <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" text="Take the quiz" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="273.0" />
                       </children>
                     </AnchorPane>
@@ -79,6 +139,7 @@
                             <Button alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" text="Last" />
                           </items>
                         </ToolBar>
+                        <WebView fx:id="myWebView" prefHeight="488.0" prefWidth="622.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                       </children>
                     </AnchorPane>
                   </items>
@@ -178,25 +239,30 @@
                     <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="449.0" prefWidth="170.0">
                       <children>
                         <TextField layoutX="-1.0" layoutY="0.0" prefWidth="115.0" />
-                        <Accordion minWidth="119.0" prefHeight="467.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+                        <Accordion minWidth="119.0" prefHeight="207.5" prefWidth="170.0" AnchorPane.bottomAnchor="259.5" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
                           <expandedPane>
+                            <TitledPane fx:id="x8" animated="false" expanded="true" styleClass="first-titled-pane" text="Kinematics">
+                              <content>
+                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                    <VBox id="VBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="-1.0">
+                                      <children>
+                                        <Label fx:id="motion1D" onMouseClicked="#loadMotion1dDemo" text="1D Motion" />
+                                        <Label fx:id="motion2d" text="2D Motion" />
+                                      </children>
+                                    </VBox>
+                                  </children>
+                                </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </expandedPane>
+                          <panes>
+                            <fx:reference source="x8" />
                             <TitledPane fx:id="x3" animated="false" text="Dynamics">
                               <content>
                                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                               </content>
                             </TitledPane>
-                          </expandedPane>
-                          <panes>
-                            <TitledPane id="x1" animated="false" minWidth="115.0" prefHeight="396.0" prefWidth="115.0" text="Kinematics">
-                              <content>
-                                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                  <children>
-                                    <ListView disable="false" prefHeight="352.0" prefWidth="152.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                  </children>
-                                </AnchorPane>
-                              </content>
-                            </TitledPane>
-                            <fx:reference source="x3" />
                             <TitledPane animated="false" text="Forces">
                               <content>
                                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
@@ -230,7 +296,7 @@
                               <children>
                                 <SplitPane dividerPositions="0.5776699029126213" focusTraversable="true" prefHeight="362.0" prefWidth="620.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                   <items>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                    <AnchorPane id="de" fx:id="demoArea" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                       <children>
                                         <Accordion prefHeight="360.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -333,12 +399,6 @@
                                     <Label text="kg" />
                                   </children>
                                 </HBox>
-                                <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="3.0">
-                                  <children>
-                                    <ToggleButton cache="true" cacheHint="DEFAULT" depthTest="INHERIT" mnemonicParsing="false" mouseTransparent="false" text="Reset" underline="false" />
-                                    <ToggleButton cache="true" cacheHint="DEFAULT" depthTest="INHERIT" mnemonicParsing="false" mouseTransparent="false" text="Start" underline="false" />
-                                  </children>
-                                </HBox>
                                 <Separator layoutX="171.0" layoutY="0.0" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="118.0" />
                                 <Label alignment="CENTER" layoutX="37.0" layoutY="2.0" text="Parameters">
                                   <font>
@@ -362,6 +422,12 @@
                                 <Separator layoutX="386.0" layoutY="0.0" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="118.0" />
                                 <CheckBox layoutX="396.0" layoutY="37.0" mnemonicParsing="false" text="Show Paths" />
                                 <CheckBox layoutX="396.0" layoutY="65.0" mnemonicParsing="false" text="Air Resistance" />
+                                <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="9.0">
+                                  <children>
+                                    <Button mnemonicParsing="false" text="Reset" />
+                                    <Button fx:id="btnStart" mnemonicParsing="false" onAction="#btnStartClicked" text="Start" />
+                                  </children>
+                                </HBox>
                               </children>
                             </AnchorPane>
                           </items>
