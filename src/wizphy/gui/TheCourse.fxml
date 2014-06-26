@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="AnchorPane" minWidth="-1.0" prefHeight="521.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wizphy.TheCourseController">
+  <children>
+    <HBox id="HBox" alignment="CENTER" fillHeight="false" prefHeight="21.0" prefWidth="800.0" spacing="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="266.0" text="Course" HBox.hgrow="ALWAYS" />
+        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToHomework" prefHeight="21.0" prefWidth="268.0" text="Homework" HBox.hgrow="ALWAYS" />
+        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToLabs" prefHeight="21.0" prefWidth="266.0" text="Lab" HBox.hgrow="ALWAYS" />
+      </children>
+    </HBox>
+    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+      <children>
+        <SplitPane dividerPositions="0.2606516290726817" focusTraversable="true" prefHeight="490.0" prefWidth="709.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+          <items>
+            <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="449.0" prefWidth="205.0">
+              <children>
+                <TextField layoutX="0.0" layoutY="0.0" prefWidth="149.0" />
+                <Accordion minWidth="119.0" prefHeight="279.0" prefWidth="205.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+                  <expandedPane>
+                    <TitledPane fx:id="x7" animated="false" text="Gravitational Field">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="8.0" spacing="5.0">
+                              <children>
+                                <Label onMouseClicked="#lbl17Clicked" prefWidth="193.0" text="Gravitational Field" />
+                                <Label onMouseClicked="#lbl18Clicked" prefWidth="193.0" text="Gravitational Potential" />
+                                <Label onMouseClicked="#lbl19Clicked" prefWidth="193.0" text="Field of a Point Mass" />
+                                <Label onMouseClicked="#lbl20Clicked" prefWidth="193.0" text="Force between point masses" />
+                                <Label onMouseClicked="#lbl21Clicked" text="Field near to the surface of the earth" />
+                              </children>
+                            </VBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                  </expandedPane>
+                  <panes>
+                    <TitledPane fx:id="x1" animated="false" minWidth="115.0" prefHeight="396.0" prefWidth="115.0" text="Kinematics">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <VBox id="VBox" alignment="CENTER" layoutX="7.0" spacing="5.0" AnchorPane.topAnchor="4.0">
+                              <children>
+                                <Label onMouseClicked="#lbl1Clicked" prefWidth="193.0" text="Linear Motion" />
+                                <Label onMouseClicked="#lbl2Clicked" prefWidth="193.0" text="Non-Linear Motion" />
+                              </children>
+                            </VBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                    <TitledPane animated="false" text="Dynamics">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="8.0" spacing="5.0">
+                              <children>
+                                <Label onMouseClicked="#lbl3Clicked" prefWidth="193.0" text="Linear Momentum" />
+                                <Label onMouseClicked="#lbl4Clicked" prefWidth="193.0" text="Newton's Laws of Motion " />
+                              </children>
+                            </VBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                    <TitledPane fx:id="x6" animated="false" text="Forces">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="4.0" spacing="5.0">
+                              <children>
+                                <Label onMouseClicked="#lbl5Clicked" prefWidth="193.0" text="Types of Forces" />
+                                <Label onMouseClicked="#lbl6Clicked" prefWidth="193.0" text="Center of Gravity" />
+                                <Label onMouseClicked="#lbl7Clicked" prefWidth="193.0" text="Turning Effects of Forces" />
+                                <Label onMouseClicked="#lbl8Clicked" prefWidth="193.0" text="Equilibrium of Forces" />
+                              </children>
+                            </VBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                    <TitledPane animated="false" text="Work, Energy and Power">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="8.0" spacing="5.0">
+                              <children>
+                                <Label onMouseClicked="#lbl9Clicked" prefWidth="193.0" text="Kinetic Energy" />
+                                <Label onMouseClicked="#lbl10Clicked" prefWidth="193.0" text="Potential Energy" />
+                                <Label onMouseClicked="#lbl11Clicked" prefWidth="193.0" text="Internal Energy" />
+                                <Label onMouseClicked="#lbl12Clicked" prefWidth="193.0" text="Energy Conversion and Conservation" />
+                                <Label onMouseClicked="#lbl13Clicked" prefWidth="193.0" text="Work and Power" />
+                              </children>
+                            </VBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                    <TitledPane animated="false" text="Circular Motion">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <VBox id="VBox" alignment="CENTER" layoutX="7.0" layoutY="8.0" spacing="5.0">
+                              <children>
+                                <Label onMouseClicked="#lbl14Clicked" prefWidth="193.0" text="Centripetal Force" />
+                                <Label onMouseClicked="#lbl15Clicked" prefWidth="193.0" text="Centripetal Acceleration" />
+                                <Label onMouseClicked="#lbl16Clicked" prefWidth="193.0" text="Kinematics of a Uniform Circular Motion" />
+                              </children>
+                            </VBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                    <fx:reference source="x7" />
+                  </panes>
+                </Accordion>
+                <Button layoutX="149.0" layoutY="0.0" minHeight="14.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="56.0" text="Search" />              </children>
+            </AnchorPane>
+            <AnchorPane fx:id="contentArea" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" />
+          </items>
+        </SplitPane>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

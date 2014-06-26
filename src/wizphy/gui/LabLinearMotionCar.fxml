@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wizphy.controller.LabLinearMotionCarController">
+  <children>
+    <ImageView id="car.png" fx:id="car_side" fitWidth="100.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="80.0">
+      <image>
+        <Image url="@../img/car.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="road1.png" fitHeight="50.0" fitWidth="0.0" layoutX="-1100.0" layoutY="150.0">
+      <image>
+        <Image url="@../img/road1.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="car_top.png" fx:id="car_top" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="150.0">
+      <image>
+        <Image url="@../img/car_top.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Label fx:id="lbl_velocity" text="Current velocity" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
+    <Label fx:id="lbl_acceleration" text="Current Acceleration" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="61.0" />
+    <Label fx:id="lbl_time_elapsed" text="Time elapsed" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="208.0" />
+    <Label fx:id="lbl_dist_travelled" text="Distance travelled" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="224.0" />
+    <Label id="lbl_" fx:id="lbl_time_rem" text="Time remaining" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="205.0" />
+    <Label fx:id="lbl_dist_rem" text="Distance remaining" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="220.0" />
+  </children>
+</AnchorPane>
