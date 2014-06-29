@@ -51,7 +51,8 @@ public class TheCourseOptionsController implements Initializable, ControlledScre
     }
 
     @FXML
-    private void readNotes(ActionEvent event) {
+    private void readNotes(ActionEvent event){
+        System.out.println(currentNotes);
         WebView myWebView=new WebView();    
         myWebView.getEngine().load(Paths.get(currentNotes).toAbsolutePath().toUri().toString());
         Group group =new Group();

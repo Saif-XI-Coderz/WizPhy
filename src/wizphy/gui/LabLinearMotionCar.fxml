@@ -2,33 +2,138 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wizphy.controller.LabLinearMotionCarController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1188.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wizphy.controller.LabLinearMotionCarController">
   <children>
-    <ImageView id="car.png" fx:id="car_side" fitWidth="100.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="80.0">
-      <image>
-        <Image url="@../img/car.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <ImageView id="road1.png" fitHeight="50.0" fitWidth="0.0" layoutX="-1100.0" layoutY="150.0">
-      <image>
-        <Image url="@../img/road1.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <ImageView id="car_top.png" fx:id="car_top" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="150.0">
-      <image>
-        <Image url="@../img/car_top.png" preserveRatio="true" smooth="true" />
-      </image>
-    </ImageView>
-    <Label fx:id="lbl_velocity" text="Current velocity" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="45.0" />
-    <Label fx:id="lbl_acceleration" text="Current Acceleration" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="61.0" />
-    <Label fx:id="lbl_time_elapsed" text="Time elapsed" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="208.0" />
-    <Label fx:id="lbl_dist_travelled" text="Distance travelled" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="224.0" />
-    <Label id="lbl_" fx:id="lbl_time_rem" text="Time remaining" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="205.0" />
-    <Label fx:id="lbl_dist_rem" text="Distance remaining" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="220.0" />
+    <SplitPane disable="false" dividerPositions="0.7630522088353414" focusTraversable="true" minHeight="671.0" minWidth="1188.0" orientation="VERTICAL" prefHeight="685.0" prefWidth="1188.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane fx:id="demoArea" maxWidth="-Infinity" minHeight="-1.0" minWidth="-Infinity" prefHeight="564.0" prefWidth="1188.0">
+          <children>
+            <ImageView id="video games yellow cars nissan track racing gran turismo 5 races playstation 3 gtr nissan gtr r35 d_www.wallmay.net_41.jpg" fitHeight="668.249952108303" fitWidth="1188.0" layoutX="0.0" layoutY="-49.0" opacity="0.5" preserveRatio="true">
+              <image>
+                <Image url="@../img/video%20games%20yellow%20cars%20nissan%20track%20racing%20gran%20turismo%205%20races%20playstation%203%20gtr%20nissan%20gtr%20r35%20d_www.wallmay.net_41.jpg" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+            <ImageView id="road1.png" fitHeight="50.0" fitWidth="0.0" layoutY="510.0" AnchorPane.leftAnchor="-1319.0">
+              <image>
+                <Image url="@../img/road1.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+            <Group id="Group" fx:id="grpToAnimate" layoutY="422.0" scaleX="1.0" scaleY="1.0" AnchorPane.leftAnchor="7.0">
+              <children>
+                <ImageView id="car.png" fx:id="car_side" fitWidth="100.0" layoutX="0.0" layoutY="38.0">
+                  <image>
+                    <Image url="@../img/car.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+                <ImageView id="car_top.png" fx:id="car_top" layoutX="0.0" layoutY="88.0">
+                  <image>
+                    <Image url="@../img/car_top.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+                <Label fx:id="lbl_velocity" layoutX="0.0" layoutY="0.0" text="Current velocity" />
+                <Label fx:id="lbl_acceleration" layoutX="0.0" layoutY="15.0" text="Current Acceleration" />
+              </children>
+            </Group>
+            <Group id="Group" layoutX="1072.0" layoutY="422.0" scaleX="-1.0" scaleY="1.0">
+              <children>
+                <ImageView id="car.png" fitWidth="100.0" layoutX="0.0" layoutY="38.0">
+                  <image>
+                    <Image url="@../img/car.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+                <ImageView id="car_top.png" layoutX="0.0" layoutY="88.0">
+                  <image>
+                    <Image url="@../img/car_top.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+                <Label id="lbl_velocity" layoutX="0.0" layoutY="0.0" scaleX="-1.0" text="Current velocity" />
+                <Label id="lbl_acceleration" layoutX="0.0" layoutY="15.0" scaleX="-1.0" text="Current Acceleration" />
+              </children>
+            </Group>
+            <Label fx:id="lbl_dist_travelled" text="Distance travelled" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="576.0" />
+            <Label fx:id="lbl_time_elapsed" layoutX="7.0" layoutY="560.0" text="Time elapsed" />
+            <Label id="lbl_" fx:id="lbl_time_rem" text="Time remaining" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="560.0" />
+            <Label fx:id="lbl_dist_rem" text="Distance remaining" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="576.0" />
+            <Label id="lbl_dist_travelled" fx:id="lbl_total_distance" layoutX="380.0" layoutY="576.0" text="Total Distance" />
+            <Label id="lbl_dist_travelled" fx:id="lbl_total_time" layoutX="509.0" layoutY="576.0" text="Total Time" />
+          </children>
+        </AnchorPane>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-1.0" minHeight="-Infinity" minWidth="-1.0" prefHeight="121.0" prefWidth="1188.0">
+          <children>
+            <ImageView id="CoronaSDK_Helicopter_5.png" fitHeight="121.0" fitWidth="1188.0" layoutX="0.0" layoutY="0.0">
+              <image>
+                <Image url="@../img/CoronaSDK_Helicopter_5.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+            <HBox id="HBox" alignment="CENTER" layoutY="41.0" spacing="5.0" AnchorPane.leftAnchor="3.0">
+              <children>
+                <Label prefWidth="42.0" text="Velocity" HBox.hgrow="NEVER">
+                  <textFill>
+                    <Color blue="0.000" green="0.960" red="1.000" fx:id="x2" />
+                  </textFill>
+                </Label>
+                <TextField id="txtboxVelocity" fx:id="txtVelocity" prefWidth="69.0" HBox.hgrow="NEVER" />
+                <Label prefWidth="21.0" text="m/s" textFill="$x2" HBox.hgrow="NEVER" />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="69.0">
+              <children>
+                <Label text="Accn" textFill="$x2" />
+                <TextField id="txtfldAccn" fx:id="txtAccn" prefWidth="69.0" />
+                <Label text="m/s2" textFill="$x2" />
+              </children>
+            </HBox>
+            <Separator layoutX="151.0" layoutY="5.0" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="118.0" />
+            <Label alignment="CENTER" layoutX="25.0" layoutY="4.0" text="Parameters" textFill="$x2">
+              <font>
+                <Font name="System Bold" size="18.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label alignment="CENTER" font="$x1" layoutX="250.0" layoutY="4.0" text="Scales" textFill="$x2" />
+            <Label alignment="CENTER" font="$x1" layoutX="443.0" layoutY="4.0" text="Options" textFill="$x2" />
+            <HBox id="HBox" alignment="CENTER" layoutX="174.0" layoutY="32.0" spacing="5.0">
+              <children>
+                <Label text="Time" textFill="$x2" wrapText="false" HBox.hgrow="NEVER">
+                  <HBox.margin>
+                    <Insets />
+                  </HBox.margin>
+                </Label>
+                <Slider fx:id="sliderTimeScale" blockIncrement="1.0" majorTickUnit="10.0" max="60.0" min="1.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" HBox.hgrow="ALWAYS" />
+                <Label id="lblDistance" prefWidth="26.0" text="1s =" textFill="$x2" />
+                <Label id="lblDistance" prefWidth="15.0" text="" HBox.hgrow="SOMETIMES" />
+                <Label id="lblDistance" prefWidth="16.0" text="s" textFill="$x2" wrapText="false" />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" layoutX="167.0" layoutY="76.0" spacing="5.0">
+              <children>
+                <Label text="Space" textFill="$x2" />
+                <Slider fx:id="sliderSpaceScale" blockIncrement="1.0" majorTickUnit="10.0" max="100.0" min="1.0" minorTickCount="5" showTickMarks="true" snapToTicks="true" value="1.0" HBox.hgrow="ALWAYS" />
+                <Label id="lblSpaceScale" prefWidth="34.0" text="1px = " textFill="$x2" />
+                <Label id="lblSpaceScale" prefWidth="8.0" text="" textFill="$x2" HBox.hgrow="SOMETIMES" />
+                <Label id="lblSpaceScale" prefHeight="21.0" prefWidth="20.0" text="px" textFill="$x2" />
+              </children>
+            </HBox>
+            <Separator layoutX="420.0" layoutY="3.0" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="118.0" />
+            <CheckBox layoutX="430.0" layoutY="42.0" mnemonicParsing="false" text="Show Paths" textFill="$x2" />
+            <CheckBox layoutX="430.0" layoutY="71.0" mnemonicParsing="false" text="Air Resistance" textFill="$x2" />
+            <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="3.0">
+              <children>
+                <Button mnemonicParsing="false" onAction="#btnPauseClicked" text="Pause" />
+                <Button mnemonicParsing="false" onAction="#btnStopClicked" text="Stop" />
+                <Button id="btnStart" mnemonicParsing="false" onAction="#btnStartClicked" text="Start" />
+              </children>
+            </HBox>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
   </children>
 </AnchorPane>

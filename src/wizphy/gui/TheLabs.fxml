@@ -6,27 +6,50 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" minWidth="-1.0" prefHeight="521.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wizphy.TheLabsController">
   <children>
-    <HBox id="HBox" alignment="CENTER" fillHeight="false" prefHeight="21.0" prefWidth="800.0" spacing="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+    <HBox id="HBox" alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="800.0" spacing="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
       <children>
-        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToCourse" prefHeight="21.0" prefWidth="266.0" text="Course" HBox.hgrow="ALWAYS" />
-        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToHomework" prefHeight="21.0" prefWidth="268.0" text="Homework" HBox.hgrow="ALWAYS" />
-        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="266.0" text="Lab" HBox.hgrow="ALWAYS" />
+        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToCourse" prefHeight="37.0" prefWidth="266.0" text="Course" HBox.hgrow="ALWAYS" />
+        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToHomework" prefHeight="37.0" prefWidth="268.0" text="Homework" HBox.hgrow="ALWAYS" />
+        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="266.0" text="Lab" HBox.hgrow="ALWAYS" />
       </children>
     </HBox>
     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
       <children>
-        <SplitPane dividerPositions="0.21679197994987467" focusTraversable="true" prefHeight="490.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <SplitPane dividerPositions="0.21679197994987467" focusTraversable="true" prefHeight="486.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
           <items>
             <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="449.0" prefWidth="170.0">
               <children>
+                <ImageView id="CoronaSDK_Helicopter_5.png" fitHeight="1000.0" fitWidth="170.0" layoutX="0.0" layoutY="-2.0">
+                  <image>
+                    <Image url="@../img/CoronaSDK_Helicopter_5.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
                 <TextField layoutX="-1.0" layoutY="-1.0" prefWidth="115.0" />
                 <Accordion minWidth="119.0" prefHeight="207.5" prefWidth="170.0" AnchorPane.bottomAnchor="259.5" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
                   <expandedPane>
+                    <TitledPane fx:id="x8" animated="false" expanded="true" styleClass="first-titled-pane" text="Internal Labs">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <VBox id="VBox" alignment="BOTTOM_LEFT" spacing="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="0.0">
+                              <children>
+                                <Label fx:id="car_lab" onMouseClicked="#loadCarLab" text="Car lab" />
+                                <Label fx:id="projectile_lab" onMouseClicked="#loadProjectileLab" text="Projectile Lab" />
+                              </children>
+                            </VBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </TitledPane>
+                  </expandedPane>
+                  <panes>
+                    <fx:reference source="x8" />
                     <TitledPane fx:id="x3" animated="false" text="External Lab">
                       <content>
                         <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -44,180 +67,18 @@
                         </AnchorPane>
                       </content>
                     </TitledPane>
-                  </expandedPane>
-                  <panes>
-                    <TitledPane fx:id="x8" animated="false" expanded="false" styleClass="first-titled-pane" text="Internal Labs">
-                      <content>
-                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                          <children>
-                            <VBox id="VBox" alignment="BOTTOM_LEFT" spacing="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="0.0">
-                              <children>
-                                <Label fx:id="motion1D" onMouseClicked="#loadMotion1dDemo" text="Straight Line Motion" />
-                                <Label fx:id="motion2d" text="2D Motion" />
-                              </children>
-                            </VBox>
-                          </children>
-                        </AnchorPane>
-                      </content>
-                    </TitledPane>
-                    <fx:reference source="x3" />
                   </panes>
                 </Accordion>
                 <Button layoutX="114.0" layoutY="0.0" mnemonicParsing="false" prefWidth="56.0" text="Search" />
               </children>
             </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0">
+            <AnchorPane fx:id="labArea" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0">
               <children>
-                <SplitPane dividerPositions="0.7560483870967742" focusTraversable="true" orientation="VERTICAL" prefHeight="488.0" prefWidth="386.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                  <items>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                      <children>
-                        <SplitPane dividerPositions="0.5776699029126213" focusTraversable="true" prefHeight="362.0" prefWidth="620.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                          <items>
-                            <AnchorPane id="de" fx:id="demoArea" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                              <children>
-                                <Label fx:id="lblDistance" text="Label" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
-                              </children>
-                            </AnchorPane>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                              <children>
-                                <Accordion prefHeight="360.0" prefWidth="271.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                  <expandedPane>
-                                    <TitledPane fx:id="x9" animated="false" expanded="true" text="Energy-Time Graph">
-                                      <content>
-                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                          <children>
-                                            <LineChart id="LineChart" prefHeight="268.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                              <xAxis>
-                                                <CategoryAxis side="BOTTOM" />
-                                              </xAxis>
-                                              <yAxis>
-                                                <NumberAxis side="LEFT" />
-                                              </yAxis>
-                                            </LineChart>
-                                          </children>
-                                        </AnchorPane>
-                                      </content>
-                                    </TitledPane>
-                                  </expandedPane>
-                                  <panes>
-                                    <TitledPane animated="false" expanded="false" text="Distance">
-                                      <content>
-                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                          <children>
-                                            <AreaChart id="AreaChart" prefHeight="268.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                              <xAxis>
-                                                <CategoryAxis side="BOTTOM" />
-                                              </xAxis>
-                                              <yAxis>
-                                                <NumberAxis side="LEFT" />
-                                              </yAxis>
-                                            </AreaChart>
-                                          </children>
-                                        </AnchorPane>
-                                      </content>
-                                    </TitledPane>
-                                    <TitledPane fx:id="x4" animated="false" text="Speed-TIme Graph">
-                                      <content>
-                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="255.0">
-                                          <children>
-                                            <AreaChart id="AreaChart" prefHeight="268.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                              <xAxis>
-                                                <CategoryAxis side="BOTTOM" />
-                                              </xAxis>
-                                              <yAxis>
-                                                <NumberAxis side="LEFT" />
-                                              </yAxis>
-                                            </AreaChart>
-                                          </children>
-                                        </AnchorPane>
-                                      </content>
-                                    </TitledPane>
-                                    <TitledPane animated="false" text="Acceleration-Time Graph">
-                                      <content>
-                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                          <children>
-                                            <AreaChart id="AreaChart" prefHeight="268.0" prefWidth="254.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                              <xAxis>
-                                                <CategoryAxis side="BOTTOM" />
-                                              </xAxis>
-                                              <yAxis>
-                                                <NumberAxis side="LEFT" />
-                                              </yAxis>
-                                            </AreaChart>
-                                          </children>
-                                        </AnchorPane>
-                                      </content>
-                                    </TitledPane>
-                                    <fx:reference source="x9" />
-                                  </panes>
-                                </Accordion>
-                              </children>
-                            </AnchorPane>
-                          </items>
-                        </SplitPane>
-                      </children>
-                    </AnchorPane>
-                    <AnchorPane maxHeight="-Infinity" maxWidth="-1.0" minHeight="-Infinity" minWidth="-1.0" prefHeight="118.0" prefWidth="384.0">
-                      <children>
-                        <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="34.0">
-                          <children>
-                            <Label prefWidth="42.0" text="Velocity" HBox.hgrow="NEVER" />
-                            <TextField id="txtboxVelocity" fx:id="txtfldVelocity" prefWidth="69.0" HBox.hgrow="NEVER" />
-                            <Label prefWidth="21.0" text="m/s" HBox.hgrow="NEVER" />
-                          </children>
-                        </HBox>
-                        <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="62.0">
-                          <children>
-                            <Label text="Accn" />
-                            <TextField fx:id="txtfldAccn" prefWidth="69.0" />
-                            <Label text="m/s2" />
-                          </children>
-                        </HBox>
-                        <Separator layoutX="162.0" layoutY="0.0" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="118.0" />
-                        <Label alignment="CENTER" layoutX="37.0" layoutY="2.0" text="Parameters">
-                          <font>
-                            <Font name="System Bold" size="18.0" fx:id="x5" />
-                          </font>
-                        </Label>
-                        <Label alignment="CENTER" font="$x5" layoutX="262.0" layoutY="2.0" text="Scales" />
-                        <Label alignment="CENTER" font="$x5" layoutX="455.0" layoutY="2.0" text="Options" />
-                        <HBox id="HBox" alignment="CENTER" layoutX="185.0" layoutY="25.0" spacing="5.0">
-                          <children>
-                            <Label text="Time" wrapText="false" HBox.hgrow="NEVER">
-                              <HBox.margin>
-                                <Insets />
-                              </HBox.margin>
-                            </Label>
-                            <Slider fx:id="sliderTimeScale" blockIncrement="1.0" majorTickUnit="10.0" max="60.0" min="1.0" minorTickCount="10" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" HBox.hgrow="ALWAYS" />
-                            <Label id="lblDistance" prefWidth="26.0" text="1s =" />
-                            <Label id="lblDistance" fx:id="lblTimeScale" prefWidth="15.0" text="" HBox.hgrow="SOMETIMES" />
-                            <Label id="lblDistance" prefWidth="16.0" text="s" wrapText="false" />
-                          </children>
-                        </HBox>
-                        <HBox id="HBox" alignment="CENTER" layoutX="178.0" layoutY="69.0" spacing="5.0">
-                          <children>
-                            <Label text="Space" />
-                            <Slider fx:id="sliderSpaceScale" blockIncrement="1.0" majorTickUnit="10.0" max="100.0" min="1.0" minorTickCount="5" showTickMarks="true" snapToTicks="true" value="1.0" HBox.hgrow="ALWAYS" />
-                            <Label id="lblSpaceScale" prefWidth="34.0" text="1px = " />
-                            <Label fx:id="lblSpaceScale" prefWidth="8.0" text="" HBox.hgrow="SOMETIMES" />
-                            <Label id="lblSpaceScale" prefHeight="21.0" prefWidth="20.0" text="px" />
-                          </children>
-                        </HBox>
-                        <Separator layoutX="431.0" layoutY="0.0" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="118.0" />
-                        <CheckBox layoutX="441.0" layoutY="37.0" mnemonicParsing="false" text="Show Paths" />
-                        <CheckBox layoutX="441.0" layoutY="65.0" mnemonicParsing="false" text="Air Resistance" />
-                        <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="9.0">
-                          <children>
-                            <Button mnemonicParsing="false" onAction="#btnPauseClicked" text="Pause" />
-                            <Button mnemonicParsing="false" onAction="#btnStopClicked" text="Stop" />
-                            <Button fx:id="btnStart" mnemonicParsing="false" onAction="#btnStartClicked" text="Start" />
-                          </children>
-                        </HBox>
-                      </children>
-                    </AnchorPane>
-                  </items>
-                </SplitPane>
+                <ImageView id="mac_physics_wallpaper_2-1920x1200.jpg" fitWidth="1188.0" layoutX="0.0" layoutY="0.0" preserveRatio="true">
+                  <image>
+                    <Image url="@../img/mac_physics_wallpaper_2-1920x1200.jpg" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
               </children>
             </AnchorPane>
           </items>

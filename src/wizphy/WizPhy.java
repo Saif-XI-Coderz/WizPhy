@@ -49,7 +49,9 @@ public class WizPhy extends Application {
         primaryStage.setTitle("WizPhy - Newtonian mechanics");
         primaryStage.getIcons().add(new Image(WizPhy.class.getResource("img/app_icon.png").toString()));
         primaryStage.setScene(scene);
+        
         primaryStage.show();
+        
     }
 
     /**

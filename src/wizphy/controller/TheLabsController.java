@@ -37,10 +37,16 @@ import javafx.util.Duration;
  * @author Sherlock
  */
 public class TheLabsController implements Initializable, ControlledScreen {
-    ScreensController myController;
+    public static String CarLabID = "carlab";
+    public static String CarLabFile = "gui/LabLinearMotionCar.fxml";
+    public static String ProjectileLabID = "projectile";
+    public static String ProjectileLabFile = "gui/LabProjectileMotion.fxml";
     
+    ScreensController myController;
+    ScreensController subController;
     @FXML
-    AnchorPane demoArea;
+    AnchorPane labArea;
+    /*
     @FXML
     TextField txtfldVelocity,txtfldAccn;
 
@@ -51,13 +57,16 @@ public class TheLabsController implements Initializable, ControlledScreen {
     
     TranslateTransition tt;
     
-   Image CAR_IMAGE = new Image(WizPhy.class.getResource("img/car.png").toString());
+   Image CAR_IMAGE = new Image(WizPhy.class.getResource("img/car.png").toString());*/
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        subController = new ScreensController();
+        subController.loadScreen(CarLabID, CarLabFile);
+        subController.loadScreen(ProjectileLabID, ProjectileLabFile);
+        labArea.getChildren().addAll(subController);
     }    
     
     @Override
@@ -75,15 +84,23 @@ public class TheLabsController implements Initializable, ControlledScreen {
        myController.setScreen(WizPhy.TheCourseID);
     }
     
-        public void loadMotion1dDemo(){
-        ImageView car = new ImageView(CAR_IMAGE); 
+        
+    @FXML
+    public void loadCarLab(){
+        System.out.println("width"+labArea.getWidth()+" height "+labArea.getHeight());
+        subController.setScreen(CarLabID);
+    }
+    
+    public void loadProjectileLab(){
+        subController.setScreen(ProjectileLabID);
+        /*ImageView car = new ImageView(CAR_IMAGE); 
         double middleHeight = demoArea.getHeight()/2;
         car.setY(middleHeight);
         demoArea.getChildren().addAll(car);
         lblSpaceScale.textProperty().bind(sliderSpaceScale.valueProperty().asString());
-        lblTimeScale.textProperty().bind(sliderTimeScale.valueProperty().asString());
+        lblTimeScale.textProperty().bind(sliderTimeScale.valueProperty().asString());*/
     }
-   
+   /*
     public void btnStartClicked(ActionEvent event){
         double middleHeight = demoArea.getHeight()/2;
         ImageView car = new ImageView(CAR_IMAGE);            
@@ -113,9 +130,7 @@ public class TheLabsController implements Initializable, ControlledScreen {
                     }                     
                  })                
                  .build();
-        tt.play();
-        
-                
+        tt.play();                
         //System.out.println("Hello world");
     }
      
@@ -125,7 +140,7 @@ public class TheLabsController implements Initializable, ControlledScreen {
     
     public void btnPauseClicked(ActionEvent event){
         tt.pause();
-    }
+    }*/
     
     @FXML
     public void lblCarRaceClicked(){

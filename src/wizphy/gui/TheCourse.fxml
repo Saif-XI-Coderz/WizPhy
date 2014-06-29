@@ -4,24 +4,30 @@
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.web.*?>
 
 <AnchorPane id="AnchorPane" minWidth="-1.0" prefHeight="521.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="wizphy.TheCourseController">
   <children>
-    <HBox id="HBox" alignment="CENTER" fillHeight="false" prefHeight="21.0" prefWidth="800.0" spacing="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+    <HBox id="HBox" alignment="CENTER" fillHeight="false" layoutY="1.0" prefHeight="37.0" prefWidth="800.0" spacing="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
       <children>
-        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="266.0" text="Course" HBox.hgrow="ALWAYS" />
-        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToHomework" prefHeight="21.0" prefWidth="268.0" text="Homework" HBox.hgrow="ALWAYS" />
-        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToLabs" prefHeight="21.0" prefWidth="266.0" text="Lab" HBox.hgrow="ALWAYS" />
+        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="266.0" text="Course" HBox.hgrow="ALWAYS" />
+        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToHomework" prefHeight="37.0" prefWidth="268.0" text="Homework" HBox.hgrow="ALWAYS" />
+        <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-1.0" mnemonicParsing="false" onAction="#goToLabs" prefHeight="37.0" prefWidth="266.0" text="Lab" HBox.hgrow="ALWAYS" />
       </children>
     </HBox>
-    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
       <children>
         <SplitPane dividerPositions="0.2606516290726817" focusTraversable="true" prefHeight="490.0" prefWidth="709.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
           <items>
             <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="-Infinity" prefHeight="449.0" prefWidth="205.0">
               <children>
+                <ImageView id="CoronaSDK_Helicopter_5.png" fitHeight="498.0" fitWidth="205.0" layoutX="0.0" opacity="1.0" AnchorPane.bottomAnchor="0.0">
+                  <image>
+                    <Image url="@../img/CoronaSDK_Helicopter_5.png" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
                 <TextField layoutX="0.0" layoutY="0.0" prefWidth="149.0" />
                 <Accordion minWidth="119.0" prefHeight="279.0" prefWidth="205.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
                   <expandedPane>
@@ -123,9 +129,18 @@
                     <fx:reference source="x7" />
                   </panes>
                 </Accordion>
-                <Button layoutX="149.0" layoutY="0.0" minHeight="14.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="56.0" text="Search" />              </children>
+                <Button layoutX="149.0" layoutY="0.0" minHeight="14.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="56.0" text="Search" />
+              </children>
             </AnchorPane>
-            <AnchorPane fx:id="contentArea" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" />
+            <AnchorPane fx:id="contentArea" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="1188.0">
+              <children>
+                <ImageView id="1305765361-earth-orbit-sun-365-physics-none-wallpaper.jpg" fitWidth="1188.0" layoutX="0.0" layoutY="0.0" preserveRatio="true" x="0.0">
+                  <image>
+                    <Image url="@../img/1305765361-earth-orbit-sun-365-physics-none-wallpaper.jpg" preserveRatio="true" smooth="true" />
+                  </image>
+                </ImageView>
+              </children>
+            </AnchorPane>
           </items>
         </SplitPane>
       </children>
