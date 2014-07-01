@@ -45,26 +45,45 @@ public class TheCourseOptionsController implements Initializable, ControlledScre
     }
 
     @FXML
+    /**
+    * Handler function when "Video" button is clicked
+    **/
     private void watchVideo(ActionEvent event) {
-        VideoPlayer player = new VideoPlayer(currentVideo);
+        //The folder path of the location of the videos
+        String path = "file:/C:/Users/Sherlock/Documents/GitHub/WizPhy/src/wizphy/course_videos/";
+        //Creates a new instance of our custom video player and initializing the video it has to play
+        VideoPlayer player = new VideoPlayer(path+currentVideo);
+        //Shows our video player on the screen with the video loaded and paused at the start
         player.show();
     }
 
     @FXML
+    /**
+    * Handler function when "Notes" button is clicked
+    **/
     private void readNotes(ActionEvent event){
-        System.out.println(currentNotes);
+        //A webview in javafx is used to display html data and webpages
         WebView myWebView=new WebView();    
+        //loads the current notes in the web engine of the webview
         myWebView.getEngine().load(Paths.get(currentNotes).toAbsolutePath().toUri().toString());
         Group group =new Group();
+        //add webview to group
         group.getChildren().addAll(myWebView);
+        //add group to scene
         Scene scene = new Scene(group);
         Stage stage = new Stage();
+        //add scene to stage
         stage.setScene(scene);
+        //show the stage
         stage.show();
     }
 
     @FXML
+    /**
+    * Handler function when "Quiz" button is clicked
+    **/
     private void takeQuiz(ActionEvent event) {
-        wizPhyHostServices.showDocument("http://localhost:8080/Test1/Kinematics1.pdf");
+        //use the HostServices of the application to open the current quiz in the browser
+        wizPhyHostServices.showDocument("http://localhost:8080/Test1/"+currentQuiz);
     }    
 }

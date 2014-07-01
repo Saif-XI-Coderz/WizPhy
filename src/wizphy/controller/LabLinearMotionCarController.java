@@ -65,32 +65,53 @@ public class LabLinearMotionCarController implements Initializable, ControlledSc
         // TODO
     }    
     
+    /**
+    * EventHandler for when the start button is clicked
+    **/
     @FXML
     public void btnStartClicked(){           
-        double pixelsDistance = demoArea.getWidth()-100.0;//length the object will travel on screen        
-        int velocity = Integer.parseInt(txtVelocity.getText());//its speed as defined by user
-        int spaceScale = (int) sliderSpaceScale.getValue(); //1px on screen = ? meters
-        double timeScale = (int) sliderTimeScale.getValue();//1sec in application = ? sec in real life
-        double distance = pixelsDistance * spaceScale;//length object is actually moving in real life 
+        //length the object will travel on screen 
+        double pixelsDistance = demoArea.getWidth()-100.0;       
+        //its speed as defined by user
+        int velocity = Integer.parseInt(txtVelocity.getText());
+        //1px on screen = ? meters
+        int spaceScale = (int) sliderSpaceScale.getValue(); 
+        //1sec in application = ? sec in real life
+        double timeScale = (int) sliderTimeScale.getValue();
+        //length object is actually moving in real life 
+        double distance = pixelsDistance * spaceScale;
         lbl_dist_travelled.setText("Distance: "+distance + "m");
-        double time = distance/velocity;//time to travel as computed by its distance and speed       
-        tt=TranslateTransitionBuilder.create()
+        //time to travel as computed by its distance and speed 
+        double time = distance/velocity;      
+        
+        //Creates a translate transition with the following parameters
+        demo=TranslateTransitionBuilder.create()
+                 //Specify the component that will transition
                  .node(grpToAnimate)
+                 //the horizontal starting point of the transition
                  .fromX(0)
+                 //the horizontal ending point of the transition
                  .toX(pixelsDistance)
+                 //time to complete the transition
                  .duration(Duration.seconds(time))
+                 //The speed at which the transition will be played
                  .rate(timeScale)
+                 //the method of interpolating intemediate points of the transition
                  .interpolator(Interpolator.LINEAR)
+                 //No. of times animation should be played
                  .cycleCount(Timeline.INDEFINITE)
+                 //Play the transition in reverse?
                  .autoReverse(true)
+                 //Actions to be taken when transition is complete
                  .onFinished(new EventHandler<ActionEvent>(){
                     @Override
                     public void handle(ActionEvent t) {
-                        System.out.println("Not supported yet.");
+                        //Do nothing yet
                     }                     
                  })                
-                 .build();
-        tt.play();                
+                 .build();                  
+        //Play the demo
+        demo.play();                
     }
     
     @FXML

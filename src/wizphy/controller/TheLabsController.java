@@ -142,10 +142,15 @@ public class TheLabsController implements Initializable, ControlledScreen {
         tt.pause();
     }*/
     
+    /**
+    * Executed when the CarRace external lab is clicked
+    **/
     @FXML
     public void lblCarRaceClicked(){
+        //open the jar file
         openLab("ejs_bu_Car_Race2b.jar");
     }
+    
     @FXML
     public void lblBoucingBallClicked(){
         openLab("ejs_mech_newton_CeilingBounce.jar");
@@ -163,12 +168,19 @@ public class TheLabsController implements Initializable, ControlledScreen {
          openLab("ejs_murcia_mech_ThrowingPackageFromAnAirplane.jar");
     }
     
+    /**
+    * Function which is used to open an external lab 
+    **/
     public void openLab(String labName){
+        //Folder path for location of the external lab'd file
         String path = "C:\\Users\\Sherlock\\Documents\\GitHub\\WizPhy\\src\\wizphy\\lab_jars\\";
+        //Array of commands to be passed to the command line
         String[] commands = {"java", "-jar",labName};
+        //Creates a new instance of a process with the corresponding arguments 
         ProcessBuilder pb=new ProcessBuilder(commands);
         pb.directory(new File(path));
         try {
+            //start the process
             pb.start();
         } catch (IOException ex) {
             Logger.getLogger(TheLabsController.class.getName()).log(Level.SEVERE, null, ex);
